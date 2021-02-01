@@ -1,0 +1,29 @@
+/* RESET */
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+
+/* BODY */
+body {
+    background-color: red;
+}
+
+/* HEADER */
+header{
+    background-color: royalblue;
+    min-height: 50px;
+}
+
+/* MAIN */
+main {
+    background-color: yellow;
+}
+
+/* FOOTER */
+footer {
+    background-color: green;
+    min-height: 50px;
+
+}
