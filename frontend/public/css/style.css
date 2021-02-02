@@ -13,7 +13,28 @@ body {
 /* HEADER */
 header{
     background-color: royalblue;
-    min-height: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header .logo {
+    width: 200px;
+    background-color: firebrick;  
+    text-align: center;  
+    padding: 10px;
+}
+
+header .menu {
+    background-color: fuchsia;
+}
+
+header .menu ul {
+    display: flex;
+    list-style: none;
+}
+
+header .menu ul li {
+    padding: 10px;
 }
 
 /* MAIN */
@@ -25,5 +46,4 @@ main {
 footer {
     background-color: green;
     min-height: 50px;
-
 }

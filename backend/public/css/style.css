@@ -10,7 +10,8 @@ body {
     background-color: red;
     display: flex;
     width: 100%;
-    flex-direction: column;
+    flex-direction: column;    
+    font-family: 'Roboto Slab', serif;
 }
 
 /* HEADER */
@@ -21,10 +22,15 @@ header{
     align-items: center;
 }
 header .logo {
-    width: 200px;
+    width: 200px;    
+    min-height: 80px;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
     background-color: firebrick;  
     text-align: center;  
     padding: 10px;
+    font-size: 20px;
 }
 
 header .menu {
@@ -42,6 +48,7 @@ header .menu ul {
 
 header .menu ul li {
     padding: 10px;
+    margin-right: 20px;
 }
 
 header .menu ul li a{
@@ -52,16 +59,28 @@ header .menu ul li a{
 /* MAIN */
 main {
     background-color: greenyellow;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
 }
 
 main .container {
     background-color: violet;
     min-height: 500px;
+    min-width: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
 }
 
 /* FOOTER */
 footer {
     background-color: green;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    
     min-height: 50px;
-    text-align: center;
+    /* text-align: center; */
 }
