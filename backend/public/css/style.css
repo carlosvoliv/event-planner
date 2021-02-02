@@ -1,0 +1,67 @@
+/* RESET */
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+
+/* BODY */
+body {
+    background-color: red;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+/* HEADER */
+header{
+    background-color: royalblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header .logo {
+    width: 200px;
+    background-color: firebrick;  
+    text-align: center;  
+    padding: 10px;
+}
+
+header .menu {
+    background-color: fuchsia;
+    width: 100%;
+}
+
+header .menu ul {
+    background-color: indigo;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    color: lavender;
+}
+
+header .menu ul li {
+    padding: 10px;
+}
+
+header .menu ul li a{
+    color: lavender;
+    text-decoration: none;
+}
+
+/* MAIN */
+main {
+    background-color: greenyellow;
+}
+
+main .container {
+    background-color: violet;
+    min-height: 500px;
+}
+
+/* FOOTER */
+footer {
+    background-color: green;
+    min-height: 50px;
+    text-align: center;
+}
