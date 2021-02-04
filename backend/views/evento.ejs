@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Gerador de Currículo | Formulário</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <span class="material-icons">
+                lens_blur
+            </span>
+            <p>Event Planner</p>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="evento">Formulário</a></li>
+                <li><a href="sobre">Sobre</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="formulario">
+                <form action="/evento" method="POST">
+                    <div class="slice">
+                        <div class="title">Responsável pelo Evento</div>
+
+                        <div class="formGroup">
+                            <label for="name">Nome:</label>
+                            <input type="text" name="name" placeholder="Insira seu nome">
+                        </div>
+                        <div class="formGroup">
+                            <label for="email">Email:</label>
+                            <input type="email" name="email" placeholder="Insira seu email">
+                        </div>
+                        <div class="formGroup">
+                            <label for="name">Data de Nascimento:</label>
+                            <input type="text" name="age" placeholder="Insira sua data de nascimento">
+                        </div>
+                        <div class="formGroup">
+                            <label for="gender">Gênero:</label>
+                            <input type="radio" name="gender" value="1"> Masculino
+                            <input type="radio" name="gender" value="2"> Feminino
+                        </div>
+                        <div class="formGroup">
+                            <label for="maritalStatus">Estado Civil:</label>
+                            <select name="maritalStatus" id="">
+                                <option value="1">Solteiro</option>
+                                <option value="1">Casado</option>
+                                <option value="1">Enrolado</option>
+                            </select>
+
+                        </div>
+                    </div>
+                    <button type="submit">Enviar</button>
+                </form>
+
+                
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Projeto Bootcamp Infnet 2021 | Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+</html>

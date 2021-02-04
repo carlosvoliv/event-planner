@@ -5,18 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500&display=swap" rel="stylesheet">   
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">   
     <link rel="stylesheet" href="css/style.css">
-    <title>Gestão de eventos | Home</title>
+    <title>Event Planner | Home</title>
 </head>
 
 <body>
     <header>
-        <div class="logo">Gestão de Eventos</div>
+        <div class="logo">
+            <span class="material-icons">
+                lens_blur
+                </span>
+            <p> Event Planner</p>
+        </div>
         <div class="menu">
             <ul>
                 <li><a href="/">Home</a></li>
-                <li><a href="formulario">Formulário</a></li>
+                <li><a href="evento">Formulário</a></li>
                 <li><a href="sobre">Sobre</a></li>
             </ul>
         </div>
@@ -24,11 +30,20 @@
 
     <main>
         <div class="container">
-            <p>Main Home</p>
+            <div class="chamada">
+                <p>Comece a planejar o seu evento agora mesmo</p>
+                <a href="evento">Clique aqui</a>
+                <!-- <button>Use a gestão de eventos</button> -->
+            </div>
+            <div class="image"><img src="/img/placeholder.png" alt="placeholder"> </div>
+            
+            
         </div> 
     </main>
 
-    <footer>footer</footer>
+    <footer>
+        <p>Projeto Bootcamp Infnet 2021 | Todos os direitos reservados.</p>
+    </footer>
 </body>
 
 </html>
