@@ -132,13 +132,27 @@ main .container .image img {
 
 main .container .formulario {
     background-color: #c5c6c7;
+    margin-left: 100px;
     padding: 20px;
     border: #66fcf1 1px solid;
     justify-content: flex-start;
+    width: 450px;
 }
 
 main .container .formulario .formGroup {
-    padding: 15px;
+    padding: 20px;
+    
+}
+
+main .container .formulario .formGroup  .inputData {
+    background-color: #1f2833;
+    height: 30px;
+    width: 100%; 
+}
+
+main .container .formulario .formGroup  .inputData input {
+    border: none;
+    border-bottom: 2px solid silver;
 }
 
 main .container .about {
@@ -156,7 +170,6 @@ main .container .about .text {
 /* FOOTER */
 footer {
     background-color: #1f2833;
-    flex-shrink: 0;
     display: flex;
     justify-content: center;
     align-items: center;    
