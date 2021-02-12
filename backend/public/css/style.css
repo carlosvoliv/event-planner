@@ -131,28 +131,104 @@ main .container .image img {
 }
 
 main .container .formulario {
+    width: 500px;
+    height: 80%;
     background-color: #c5c6c7;
-    margin-left: 100px;
     padding: 20px;
-    border: #66fcf1 1px solid;
-    justify-content: flex-start;
-    width: 450px;
+    border: #45a29e 1px solid;
+    border-radius: 5px;
+    margin: auto;
+}
+
+main .container .formulario .slice .title {
+    padding: 10px;
+    font-size: 20px;
+    color: #45a29e;
+    text-align: center;
 }
 
 main .container .formulario .formGroup {
-    padding: 20px;
-    
+    padding: 15px;
+
 }
 
-main .container .formulario .formGroup  .inputData {
-    background-color: #1f2833;
-    height: 30px;
-    width: 100%; 
+main .container .formulario .formGroup .formBox {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
 }
 
-main .container .formulario .formGroup  .inputData input {
+main .container .formulario .formGroup .formBox input {
+    background-color: #c5c6c7;
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto Slab', serif;
+    font-size: 16px;
+    color: #45a29e;
+    padding-top: 20px;
+    padding-bottom: 2px;
     border: none;
-    border-bottom: 2px solid silver;
+    outline: none;
+}
+
+main .container .formulario .formGroup .formBox label {
+    position: absolute;
+    bottom: 0px;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid black;
+}
+
+main .container .formulario .formGroup .formBox label::after {
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: -1px;
+    height: 100%;
+    width: 100%; 
+    border-bottom: 3px solid #45a29e;
+    transform: translateX(-100%);
+    transition: transform  0.3s ease;
+}
+
+main .container .formulario .formGroup .formBox label .content-box {
+    position: absolute;
+    bottom: 5px;
+    left: 0px;
+    transition: all 0.3s ease;
+}
+
+main .container .formulario .formGroup .formBox input:focus + .label-box .content-box,
+main .container .formulario .formGroup .formBox input:valid + .label-box .content-box {
+    background-color: #c5c6c7;
+    transform: translateY(-130%);
+    font-size: 13px;
+    color: #45a29e;
+}
+
+main .container .formulario .formGroup .formBox input:focus + .label-box::after, 
+main .container .formulario .formGroup .formBox input:valid + .label-box::after {
+    transform: translateX(0%);
+}
+
+main .container .formulario button {
+    background-color:#45a29e;
+    padding: 10px;
+    font-family: 'Roboto Slab', serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: #c5c6c7;
+    text-decoration: none;
+    border: none;
+    border-radius: 0;
+    margin: 10px 15px;
+}
+
+main .container .formulario button:hover {
+    background-color:#1f2833;
+    color: #66fcf1;
 }
 
 main .container .about {
@@ -170,6 +246,7 @@ main .container .about .text {
 /* FOOTER */
 footer {
     background-color: #1f2833;
+    flex-shrink: 0;
     display: flex;
     justify-content: center;
     align-items: center;    

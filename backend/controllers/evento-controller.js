@@ -2,12 +2,27 @@ const fs = require('fs')
 const ejs = require('ejs')
 const htmlToPdf = require('html-pdf-node')
 
+const sexoModel = require('../models/sexo-model')
+
 const handlerGetEvento = (req, res, next) => {
     console.log('evento ok')
-    res.render('evento')
+
+    const resultadoModel = sexoModel.getAllSexo()
+
+    const sexoItensViewModel = resultadoModel.map((item) => {
+        return {
+            value: item.id,
+            label: item.descricao
+        }
+    })
+
+    const getViewModel = {
+        sexo: sexoItensViewModel,
+    }
+    res.render('evento', getViewModel)
 }
 
-const handlerPostEvento = (req, res, next) => {
+const handlerPostEvento = (req, res, next) => { 
     // console.log(req)
     // console.log(req.body)
 
@@ -19,18 +34,20 @@ const handlerPostEvento = (req, res, next) => {
         nome: body.name,
         email: body.email,
         age: body.age,
+        telefone:body.telefone,
+        sexo: body.gender
     }
 
     // TO-DO: criar template
 
     var htmlText = fs.readFileSync('./views/evento-pdf.ejs', 'utf8')
-    console.log(htmlText)
+    // console.log(htmlText)
 
     
     // TO-DO: criar html
 
     var htmlRenderized = ejs.render(htmlText, viewModel)
-    console.log(htmlRenderized)
+    // console.log(htmlRenderized)
 
     // TO-DO: transformar em pdf
 

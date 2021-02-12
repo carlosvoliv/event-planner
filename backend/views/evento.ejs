@@ -32,23 +32,46 @@
             <div class="formulario">
                 <form action="/evento" method="POST">
                     <div class="slice">
-                        <div class="title"><h1>Responsável pelo Evento</h1></div>
+                        <div class="title">Responsável pelo Evento</div>
 
                         <div class="formGroup">
-                            <label class='customField' for="name">Nome:</label>
-                            <input class="inputData" type="text" name="name" placeholder="Insira seu nome">
+                            <div class="formBox">
+                                <input type="text" name="name" autocomplete="off" required>
+                                <label for="name" class="label-box">
+                                    <span class="content-box">Nome</span>
+                                </label>
+                            </div>
                         </div>
+
                         <div class="formGroup">
-                            <label for="email">Email:</label>
-                            <input class="inputData" type="email" name="email" placeholder="Insira seu email">
+                            <div class="formBox">
+                                <input type="email" name="email" autocomplete="off" required>
+                                <label for="email" class="label-box">
+                                    <span class="content-box">Email</span>
+                                </label>
+                            </div>
                         </div>
+
                         <div class="formGroup">
-                            <label class='customField' for="age">Data de Nascimento:</label>
-                            <input class="inputData" type="text" name="age" placeholder="Insira sua data de nascimento">
+                            <div class="formBox">
+                                <input type="text" name="age" autocomplete="off" required>
+                                <label for="age" class="label-box">
+                                    <span class="content-box">Data de Nascimento</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="formGroup">
+                            <div class="formBox">
+                                <input type="number" name="telefone" autocomplete="off" required>
+                                <label for="telefone" class="label-box">
+                                    <span class="content-box">Telefone</span>
+                                </label>
+                            </div>
                         </div>
                         <div class="formGroup">
                             <label for="gender">Gênero:</label>
-                            <input type="radio" name="gender" value="1"> Masculino
+                            <input type="radio" name="gender" value="1" checked> Masculino
                             <input type="radio" name="gender" value="2"> Feminino
                         </div>
                         <div class="formGroup">
