@@ -5,7 +5,7 @@ const htmlToPdf = require('html-pdf-node')
 const sexoModel = require('../models/sexo-model')
 
 const handlerGetEvento = (req, res, next) => {
-    console.log('evento ok')
+    console.log(':: página do evento funfando, será que vai gerar o pdf? Só testando')
 
     const resultadoModel = sexoModel.getAllSexo()
 
@@ -26,30 +26,35 @@ const handlerPostEvento = (req, res, next) => {
     // console.log(req)
     // console.log(req.body)
 
+    // TODO Validar os dados que recebo no formulario
+    // TODO buscar descricoes dos valores do formulario
+
     const body = req.body
 
-    // TO-DO: criar view model para render evento
+    // -- view model para renderizar o evento
+    
+    const genderResultado = sexoModel.getSexoPorId(body.gender)
 
     const viewModel = {
         nome: body.name,
         email: body.email,
         age: body.age,
         telefone:body.telefone,
-        sexo: body.gender
+        sexo: genderResultado.descricao
     }
 
-    // TO-DO: criar template
+    // -- criando o template
 
     var htmlText = fs.readFileSync('./views/evento-pdf.ejs', 'utf8')
     // console.log(htmlText)
 
     
-    // TO-DO: criar html
+    // -- criando o html
 
     var htmlRenderized = ejs.render(htmlText, viewModel)
     // console.log(htmlRenderized)
 
-    // TO-DO: transformar em pdf
+    // -- transformando em pdf
 
     let file = { content: htmlRenderized }
     let options = { format: 'A4' }
@@ -60,7 +65,7 @@ const handlerPostEvento = (req, res, next) => {
             res.send(pdfBuffer)
     })
 
-
+    console.log('::  se você está lendo essa mensagem, saiba que seu pdf está sendo feito nesse exato momento')
     // res.send({
     //     mensagem:"teste do POST Evento"
     // })

@@ -1,4 +1,4 @@
-console.log('funcionando')
+console.log(':: servidor funcionando, manda bala')
 
 const express = require('express')
 const path = require('path')
@@ -16,7 +16,7 @@ app.set('view engine', 'ejs')
 app.use(express.static(path.join(__dirname, 'public')))
 
 const handlerRoot = (req, res, next) => {
-    console.log('index ok')
+    console.log(':: index rodando suave')
     res.render('index')
 }
 
@@ -29,5 +29,5 @@ app.get('/sobre', sobreController.get)
 
 
 app.listen(PORT, () => {
-    console.log ('conectado na porta :' + PORT)
+    console.log (':: se liga, vc esta conectado na porta :' + PORT)
 })
