@@ -49,12 +49,15 @@ const handlerPostEvento = (req, res, next) => {
 
   const genderResultado = sexoModel.getSexoPorId(body.gender)
 
+  const estadoCivilResultado = estadoCivilModel.getEstadoCivilPorId(body.maritalStatus)
+
   const viewModel = {
     nome: body.name,
     email: body.email,
     age: body.age,
     telefone: body.telefone,
-    sexo: genderResultado.descricao
+    sexo: genderResultado.descricao,
+    estadoCivil:estadoCivilResultado.descricao
   }
 
   // -- criando o template
