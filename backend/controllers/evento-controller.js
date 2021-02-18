@@ -17,14 +17,12 @@ const handlerGetEvento = (req, res, next) => {
     })
 
     const getViewModel = {
-        sexo: sexoItensViewModel,
+        sexo: sexoItensViewModel
     }
     res.render('evento', getViewModel)
 }
 
 const handlerPostEvento = (req, res, next) => { 
-    // console.log(req)
-    // console.log(req.body)
 
     // TODO Validar os dados que recebo no formulario
     // TODO buscar descricoes dos valores do formulario
@@ -32,7 +30,7 @@ const handlerPostEvento = (req, res, next) => {
     const body = req.body
 
     // -- view model para renderizar o evento
-    
+
     const genderResultado = sexoModel.getSexoPorId(body.gender)
 
     const viewModel = {
