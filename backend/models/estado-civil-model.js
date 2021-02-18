@@ -21,24 +21,24 @@ const data = [
     }    
 ]
 
-const getById = (id) => {
-    console.log('Início getById: ' + id)
+// const getById = (id) => {
+//     console.log('Início getById: ' + id)
 
-    const resposta = data.find((item) => {
-        return item.id === id
-    })
+//     const resposta = data.find((item) => {
+//         return item.id === id
+//     })
 
-    console.log('resposta método geById: ')
-    console.log(resposta)
+//     console.log('resposta método geById: ')
+//     console.log(resposta)
 
-    return resposta
-}
+//     return resposta
+// }
 
 const getAll = () => {
     return data
 }
 
 module.exports = {
-    getAllSexo: getAll,
-    getSexoPorId: getById
+    getAllEstadoCivil: getAll,
+    // getEstadoCivilPorId: getById
 }

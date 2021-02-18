@@ -4,15 +4,30 @@ const htmlToPdf = require('html-pdf-node')
 
 const sexoModel = require('../models/sexo-model')
 
+const estadoCivilModel = require('../models/estado-civil-model')
+const { INSPECT_MAX_BYTES } = require('buffer')
+
 const handlerGetEvento = (req, res, next) => {
     console.log(':: página do evento funfando, será que vai gerar o pdf? Só testando')
-
+    
+    // sexo
     const resultadoModel = sexoModel.getAllSexo()
 
     const sexoItensViewModel = resultadoModel.map((item) => {
         return {
             value: item.id,
             label: item.descricao
+        }
+    })
+
+    // estado civil
+
+    const resultadoEstadoCivil = estadoCivilModel.getAllEstadoCivil()
+
+    const estadoCivilItensViewModel = resultadoEstadoCivil.map((item) => {
+        return {
+            value: item.id,
+            label: `${item.id} - ${item.descricao}`
         }
     })
 
