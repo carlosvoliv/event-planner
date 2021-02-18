@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Gerador de Currículo | Formulário</title>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <span class="material-icons">
+        lens_blur
+      </span>
+      <p>Event Planner</p>
+    </div>
+    <div class="menu">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="evento">Formulário</a></li>
+        <li><a href="sobre">Sobre</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="formulario">
+        <form action="/evento" method="POST">
+          <div class="slice">
+            <div class="title">Responsável pelo Evento</div>
+
+            <div class="formGroup">
+              <div class="formBox">
+                <input type="text" name="name" autocomplete="off" required>
+                <label for="name" class="label-box">
+                  <span class="content-box">Nome</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="formGroup">
+              <div class="formBox">
+                <input type="email" name="email" autocomplete="off" required>
+                <label for="email" class="label-box">
+                  <span class="content-box">Email</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="formGroup">
+              <div class="formBox">
+                <input type="text" name="age" autocomplete="off" required>
+                <label for="age" class="label-box">
+                  <span class="content-box">Data de Nascimento</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="formGroup">
+              <div class="formBox">
+                <input type="number" name="telefone" autocomplete="off" required>
+                <label for="telefone" class="label-box">
+                  <span class="content-box">Telefone</span>
+                </label>
+              </div>
+            </div>
+            <div class="formGroup">
+              <label for="gender">Gênero:</label>
+              <input type="radio" name="gender" value="1" checked> Masculino
+              <input type="radio" name="gender" value="2"> Feminino
+            </div>
+            <div class="formGroup">
+              <label for="maritalStatus">Estado Civil:</label>
+              <select name="maritalStatus" id="">
+                <option value="">Selecione ...</option>
+                <% estadoCivil.map(item=> { %>
+                  <option value="<%= item.value %>">
+                    <%= item.label %>
+                  </option>
+
+                  <% }) %>
+              </select>
+
+            </div>
+          </div>
+          <button type="submit">Enviar</button>
+        </form>
+
+
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>Projeto Bootcamp Infnet 2021 | Todos os direitos reservados.</p>
+  </footer>
+</body>
+
+</html>
