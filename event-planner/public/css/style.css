@@ -23,6 +23,11 @@ header{
     display: flex;
     align-content: space-around;
     align-items: center;
+    height: 80px;
+}
+
+header a {
+    text-decoration: none;
 }
 header .logo {   
     min-height: 50px;
@@ -232,15 +237,14 @@ main .container .formulario button:hover {
 }
 
 main .container .about {
+    width: 100%;
+    align-self: flex-start;
     display: flex;
-}
-
-main .container .about img {
-    width: 50%;
+    justify-content: center;
 }
 
 main .container .about .text {
-    margin-top: 20px;
+    padding: 20px;
 }
 
 /* FOOTER */
