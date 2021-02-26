@@ -27,7 +27,7 @@ const handlerGetEvento = (req, res, next) => {
   const estadoCivilItensViewModel = resultadoEstadoCivil.map((item) => {
     return {
       value: item.id,
-      label: `${item.id} - ${item.descricao}`
+      label: `${item.descricao}`
     }
   })
 
@@ -54,7 +54,7 @@ const handlerPostEvento = (req, res, next) => {
   const viewModel = {
     nome: body.name,
     email: body.email,
-    age: body.age,
+    cpf: body.age,
     telefone: body.telefone,
     sexo: genderResultado.descricao,
     estadoCivil:estadoCivilResultado.descricao

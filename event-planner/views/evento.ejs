@@ -38,7 +38,7 @@
       <div class="formulario">
         <form action="/evento" method="POST">
           <div class="slice">
-            <div class="title">Responsável pelo Evento</div>
+            <div class="title">Dados do Responsável</div>
 
             <div class="formGroup">
               <div class="formBox">
@@ -74,26 +74,33 @@
                   <span class="content-box">Telefone</span>
                 </label>
               </div>
-            </div>
-            <div class="formGroup">
-              <label for="gender">Gênero:</label>
-              <input type="radio" name="gender" value="1" checked> Masculino
-              <input type="radio" name="gender" value="2"> Feminino
-            </div>
-            <div class="formGroup">
-              <label for="maritalStatus">Estado Civil:</label>
+            </div>                       
+          </div>
+
+          <div class="slice">
+
+            <div class="title">Informações gerais</div>
+
+            <div class="formGroup">              
+              <label for="maritalStatus">Tipo de evento</label>
               <select name="maritalStatus" id="">
                 <option value="">Selecione ...</option>
                 <% estadoCivil.map(item=> { %>
                   <option value="<%= item.value %>">
                     <%= item.label %>
                   </option>
-
                   <% }) %>
               </select>
-
             </div>
+
+            <div class="formGroup">
+              <label for="gender">Gênero:</label>
+              <input type="radio" name="gender" value="1" checked> Masculino
+              <input type="radio" name="gender" value="2"> Feminino
+            </div>             
+
           </div>
+
           <button type="submit">Enviar</button>
         </form>
 

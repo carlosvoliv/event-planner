@@ -1,23 +1,31 @@
 const data = [
   {
     id: '1',
-    descricao: 'Solteiro'
+    descricao: 'Social'
   },
   {
     id: '2',
-    descricao: 'Casado'
+    descricao: 'Corporativo'
   },
   {
     id: '3',
-    descricao: 'Enrolado'
+    descricao: 'Espiritual'
   },
   {
     id: '4',
-    descricao: 'Separado'
+    descricao: 'Acadêmico'
   },
   {
     id: '5',
-    descricao: 'Encalhado'
+    descricao: 'Cultural'
+  },
+  {
+    id: '6',
+    descricao: 'Esportivo'
+  },
+  {
+    id: '7',
+    descricao: 'Educacional'
   }
 ]
 
