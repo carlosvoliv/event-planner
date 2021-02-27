@@ -23,7 +23,6 @@ const handlerRoot = (req, res, next) => {
 app.get("/", handlerRoot);
 app.get("/evento", eventoController.get);
 app.post("/evento", eventoController.post);
-
 app.get("/sobre", sobreController.get);
 
 app.listen(port, () => {

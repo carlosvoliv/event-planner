@@ -1,0 +1,33 @@
+<div class="slice">
+
+  <div class="title">Informações gerais</div>
+
+  <div class="formGroup">              
+    <label for="maritalStatus">Caráter do Evento:</label>
+    <select name="maritalStatus" id="">
+      <option value="">Selecione ...</option>
+      <% caraterEvento.map(item=> { %>
+        <option value="<%= item.value %>">
+          <%= item.label %>
+        </option>
+        <% }) %>
+    </select>
+  </div>
+
+  <div class="formGroup">
+    <label for="local">Local:</label>
+    <input type="radio" name="local" value="1"> Próprio
+    <input type="radio" name="local" value="2"> Alugado
+    <input type="radio" name="local" value="3"> Público
+  </div>   
+  
+  <div class="formGroup">
+    <div class="formBox">
+      <input type="text" name="endereco" autocomplete="off" required>
+      <label for="endereco" class="label-box">
+        <span class="content-box">Endereço</span>
+      </label>
+    </div>
+  </div>
+
+</div>

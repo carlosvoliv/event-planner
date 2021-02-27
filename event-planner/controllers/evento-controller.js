@@ -9,7 +9,7 @@ const caraterEventolModel = require('../models/carater-evento-model')
 const handlerGetEvento = (req, res, next) => {
   console.log(':: página do evento funfando, será que vai gerar o pdf? Só testando')
 
-  // sexo
+  // local
   const resultadoModel = localModel.getAllLocal()
 
   const localItensViewModel = resultadoModel.map((item) => {
@@ -19,7 +19,7 @@ const handlerGetEvento = (req, res, next) => {
     }
   })
 
-  // estado civil
+  // carater do evento
 
   const resultadoCaraterEvento = caraterEventolModel.getAllCaraterEvento()
 

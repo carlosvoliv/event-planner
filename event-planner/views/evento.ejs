@@ -30,79 +30,14 @@
     <div class="container">
       <div class="formulario">
         <form action="/evento" method="POST">
-          <div class="slice">
-            <div class="title">Dados do Responsável</div>
 
-            <div class="formGroup">
-              <div class="formBox">
-                <input type="text" name="name" autocomplete="off" required>
-                <label for="name" class="label-box">
-                  <span class="content-box">Nome</span>
-                </label>
-              </div>
-            </div>
+          <!-- Dados Pessoais -->
+          <%- include('./form-slice/personal.ejs') %>
 
-            <div class="formGroup">
-              <div class="formBox">
-                <input type="email" name="email" autocomplete="off" required>
-                <label for="email" class="label-box">
-                  <span class="content-box">Email</span>
-                </label>
-              </div>
-            </div>
+          <!-- Dados Evento -->
+          <%- include('./form-slice/event.ejs') %>
 
-            <div class="formGroup">
-              <div class="formBox">
-                <input type="text" name="cpf" autocomplete="off" required>
-                <label for="cpf" class="label-box">
-                  <span class="content-box">CPF</span>
-                </label>
-              </div>
-            </div>
-
-            <div class="formGroup">
-              <div class="formBox">
-                <input type="number" name="telefone" autocomplete="off" required>
-                <label for="telefone" class="label-box">
-                  <span class="content-box">Telefone</span>
-                </label>
-              </div>
-            </div>                       
-          </div>
-
-          <div class="slice">
-
-            <div class="title">Informações gerais</div>
-
-            <div class="formGroup">              
-              <label for="maritalStatus">Caráter do Evento:</label>
-              <select name="maritalStatus" id="">
-                <option value="">Selecione ...</option>
-                <% caraterEvento.map(item=> { %>
-                  <option value="<%= item.value %>">
-                    <%= item.label %>
-                  </option>
-                  <% }) %>
-              </select>
-            </div>
-
-            <div class="formGroup">
-              <label for="local">Local:</label>
-              <input type="radio" name="local" value="1"> Próprio
-              <input type="radio" name="local" value="2"> Alugado
-              <input type="radio" name="local" value="3"> Público
-            </div>   
-            
-            <div class="formGroup">
-              <div class="formBox">
-                <input type="text" name="endereco" autocomplete="off" required>
-                <label for="endereco" class="label-box">
-                  <span class="content-box">Endereço</span>
-                </label>
-              </div>
-            </div>
-
-          </div>
+          
 
           <div class="btn">
             
