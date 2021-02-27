@@ -37,7 +37,7 @@ const getById = (id) => {
         return item.id === id
     })
 
-    console.log('resposta método geById: ')
+    console.log('resposta método geById > caráter: ')
     console.log(resposta)
 
     return resposta
@@ -48,6 +48,6 @@ const getAll = () => {
 }
 
 module.exports = {
-  getAllEstadoCivil: getAll,
-  getEstadoCivilPorId: getById
+  getAllCaraterEvento: getAll,
+  getCaraterEventoPorId: getById
 }

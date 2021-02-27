@@ -20,17 +20,10 @@
        <div class="menu">
         <ul>
           <li><a href="/">Home</a></li>
-          <li><a href="evento">Formulário</a></li>
+          <li><a href="evento">Planner</a></li>
           <li><a href="sobre">Sobre</a></li>
         </ul>
-    </a>
-    <div class="menu">
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="evento">Formulário</a></li>
-        <li><a href="sobre">Sobre</a></li>
-      </ul>
-    </div>
+    </a>    
   </header>
 
   <main>
@@ -60,9 +53,9 @@
 
             <div class="formGroup">
               <div class="formBox">
-                <input type="text" name="age" autocomplete="off" required>
-                <label for="age" class="label-box">
-                  <span class="content-box">Data de Nascimento</span>
+                <input type="text" name="cpf" autocomplete="off" required>
+                <label for="cpf" class="label-box">
+                  <span class="content-box">CPF</span>
                 </label>
               </div>
             </div>
@@ -82,10 +75,10 @@
             <div class="title">Informações gerais</div>
 
             <div class="formGroup">              
-              <label for="maritalStatus">Tipo de evento</label>
+              <label for="maritalStatus">Caráter do Evento:</label>
               <select name="maritalStatus" id="">
                 <option value="">Selecione ...</option>
-                <% estadoCivil.map(item=> { %>
+                <% caraterEvento.map(item=> { %>
                   <option value="<%= item.value %>">
                     <%= item.label %>
                   </option>
@@ -94,14 +87,28 @@
             </div>
 
             <div class="formGroup">
-              <label for="gender">Gênero:</label>
-              <input type="radio" name="gender" value="1" checked> Masculino
-              <input type="radio" name="gender" value="2"> Feminino
-            </div>             
+              <label for="local">Local:</label>
+              <input type="radio" name="local" value="1"> Próprio
+              <input type="radio" name="local" value="2"> Alugado
+              <input type="radio" name="local" value="3"> Público
+            </div>   
+            
+            <div class="formGroup">
+              <div class="formBox">
+                <input type="text" name="endereco" autocomplete="off" required>
+                <label for="endereco" class="label-box">
+                  <span class="content-box">Endereço</span>
+                </label>
+              </div>
+            </div>
 
           </div>
 
-          <button type="submit">Enviar</button>
+          <div class="btn">
+            
+            <button type="submit">Enviar</button>
+
+          </div>
         </form>
 
 
@@ -110,7 +117,7 @@
   </main>
 
   <footer>
-    <p>Projeto Bootcamp Infnet 2021 | Todos os direitos reservados.</p>
+    <p>Projeto deselvolvido para o Bootcamp FullStalck MERN Infnet 2021 | Todos os direitos reservados.</p>
   </footer>
 </body>
 

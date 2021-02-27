@@ -12,7 +12,7 @@ html, body {
 }
 
 body {
-    background-color:#1f2833;
+    background-color:#d0d0d0;
     display: flex;    
     flex-direction: column;    
     font-family: 'Roboto Slab', serif;
@@ -21,9 +21,11 @@ body {
 /* HEADER */
 header{
     display: flex;
+    background-color: #1f2833;
     align-content: space-around;
     align-items: center;
     height: 80px;
+    margin-bottom: 10px;
 }
 
 header a {
@@ -79,7 +81,7 @@ header .menu ul li a{
 
 header .menu ul li a:hover {
     background-color: #66fcf1;
-    border-top: #05386b 1px solid;
+    border-radius: 5px;
     color: #05386b;
 }
 
@@ -118,6 +120,7 @@ main .container .chamada a {
     font-family: 'Roboto Slab', serif;
     color: #c5c6c7;
     text-decoration: none;
+    border-radius: 5px;
 }
 
 main .container .chamada a:hover {
@@ -221,6 +224,11 @@ main .container .formulario .formGroup .formBox input:valid + .label-box::after 
     transform: translateX(0%);
 }
 
+main .container .formulario .btn {
+    display: flex;
+    justify-content: center;
+}
+
 main .container .formulario button {
     background-color:#45a29e;
     padding: 10px;
@@ -230,8 +238,8 @@ main .container .formulario button {
     color: #c5c6c7;
     text-decoration: none;
     border: none;
-    border-radius: 0;
-    margin: 10px 15px;
+    border-radius: 5px;
+    
 }
 
 main .container .formulario button:hover {
@@ -252,9 +260,12 @@ main .container .about .text {
 
 /* FOOTER */
 footer {
+    margin-top: 20px;
+    padding: 10px;
     background-color: #1f2833;
     flex-shrink: 0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;    
     min-height: 50px;
@@ -263,4 +274,5 @@ footer {
 
 footer p {
     color: #45a29e;
+    font-size: small;
 }

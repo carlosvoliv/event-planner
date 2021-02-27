@@ -2,18 +2,17 @@ const fs = require('fs')
 const ejs = require('ejs')
 const htmlToPdf = require('html-pdf-node')
 
-const sexoModel = require('../models/sexo-model')
+const localModel = require('../models/local-model')
 
-const estadoCivilModel = require('../models/estado-civil-model')
-const { INSPECT_MAX_BYTES } = require('buffer')
+const caraterEventolModel = require('../models/carater-evento-model')
 
 const handlerGetEvento = (req, res, next) => {
   console.log(':: página do evento funfando, será que vai gerar o pdf? Só testando')
 
   // sexo
-  const resultadoModel = sexoModel.getAllSexo()
+  const resultadoModel = localModel.getAllLocal()
 
-  const sexoItensViewModel = resultadoModel.map((item) => {
+  const localItensViewModel = resultadoModel.map((item) => {
     return {
       value: item.id,
       label: item.descricao
@@ -22,9 +21,9 @@ const handlerGetEvento = (req, res, next) => {
 
   // estado civil
 
-  const resultadoEstadoCivil = estadoCivilModel.getAllEstadoCivil()
+  const resultadoCaraterEvento = caraterEventolModel.getAllCaraterEvento()
 
-  const estadoCivilItensViewModel = resultadoEstadoCivil.map((item) => {
+  const caraterEventoItensViewModel = resultadoCaraterEvento.map((item) => {
     return {
       value: item.id,
       label: `${item.descricao}`
@@ -32,8 +31,8 @@ const handlerGetEvento = (req, res, next) => {
   })
 
   const getViewModel = {
-    sexo: sexoItensViewModel,
-    estadoCivil: estadoCivilItensViewModel
+    local: localItensViewModel,
+    caraterEvento: caraterEventoItensViewModel
   }
   res.render('evento', getViewModel)
 }
@@ -47,17 +46,18 @@ const handlerPostEvento = (req, res, next) => {
 
   // -- view model para renderizar o evento
 
-  const genderResultado = sexoModel.getSexoPorId(body.gender)
+  const localResultado = localModel.getLocalPorId(body.local)
 
-  const estadoCivilResultado = estadoCivilModel.getEstadoCivilPorId(body.maritalStatus)
+  const caraterEventoResultado = caraterEventolModel.getCaraterEventoPorId(body.maritalStatus)
 
   const viewModel = {
     nome: body.name,
     email: body.email,
-    cpf: body.age,
+    cpf: body.cpf,
     telefone: body.telefone,
-    sexo: genderResultado.descricao,
-    estadoCivil:estadoCivilResultado.descricao
+    local: localResultado.descricao,
+    tipoDeEvento: caraterEventoResultado.descricao,
+    endereco: body.endereco
   }
 
   // -- criando o template
