@@ -48,7 +48,7 @@ const handlerPostEvento = (req, res, next) => {
 
   const localResultado = localModel.getLocalPorId(body.local)
 
-  const caraterEventoResultado = caraterEventolModel.getCaraterEventoPorId(body.maritalStatus)
+  const caraterEventoResultado = caraterEventolModel.getCaraterEventoPorId(body.carater)
 
   const viewModel = {
     nome: body.name,

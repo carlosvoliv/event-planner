@@ -1,5 +1,3 @@
-console.log(":: servidor funcionando, manda bala");
-
 const express = require("express");
 const path = require("path");
 const eventoController = require("./controllers/evento-controller");
@@ -24,6 +22,12 @@ app.get("/", handlerRoot);
 app.get("/evento", eventoController.get);
 app.post("/evento", eventoController.post);
 app.get("/sobre", sobreController.get);
+
+const { version, name } = require('./package.json')
+
+console.log(
+  `<<<  ${name} v${version} was started in 'DEV' environment  >>>`
+)
 
 app.listen(port, () => {
   console.log(":: se liga, vc esta conectado na porta :" + port);
