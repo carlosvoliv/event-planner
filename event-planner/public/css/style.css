@@ -73,6 +73,11 @@ header .menu ul li {
     padding: 10px;
 }
 
+.active a {
+    border: #66fcf1 2px solid;
+    border-radius: 5px;
+}
+
 header .menu ul li a{     
     color: #66fcf1;
     padding: 10px;
@@ -84,6 +89,8 @@ header .menu ul li a:hover {
     border-radius: 5px;
     color: #05386b;
 }
+
+
 
 /* MAIN */
 main {
