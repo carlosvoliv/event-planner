@@ -109,6 +109,7 @@ main .container {
     display: flex;
     align-items: center;
     padding: 10px;
+    justify-content: center;
 }
 
 /* HOME */
@@ -291,15 +292,46 @@ main .container {
 /* ABOUT sobre */
 
 .about {
-    width: 100%;
     align-self: flex-start;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-self: center;
+    background-color: royalblue;
 }
 
-.about .text {
-    padding: 20px;
+.about-project {
+    background-color: green;
+    text-align: center;
+    max-width: 600px;
 }
+
+.about-me {
+    background-color: #c5c6c7;
+    padding: 20px;
+    border: #45a29e 2px solid;
+    border-radius: 5px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.about-me-text h3{
+    color: #45a29e;
+    font-weight: normal;
+}
+
+.social i{
+    color: #05386b;
+    text-decoration: none;
+}
+
+.about-me img {
+    border-radius: 50%;
+    max-width: 70px;
+    margin-right: 30px;
+}
+
+
 
 /* FOOTER */
 footer {
