@@ -7,69 +7,203 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
   <title>html : pdf</title>
   <style>
     * {
-      margin: 0;
-      padding: 0;
-    }
-
-    body{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      background-color: chartreuse;
+      background-color: #d0d0d0;
       font-family: 'Roboto Slab', serif;
+      margin-left: 8px;
+      margin-right: 8px;      
     }
 
-    header {
-      background: cadetblue;
-      width: 100%;
-      height: 40px;
-      color:cadetblue;
-      margin: 10px 10px;
-      padding: 20px;
-      border: #d0d0d0 3px solid;
+    h1 {
       text-align: center;
-      font-family: 'Roboto Slab', serif;
+      font-size: 25px;
+      font-weight: lighter;
+      color: #45a29e;
+    }
 
+    .slice {
+      padding: 20px;
+      background-color: #c5c6c7;
+      border: 2px solid #45a29e;
+      border-radius: 5px;
+      margin-bottom: 20px;
     }
-    main {
-      background-color: burlywood;
+
+    .title {
+      padding: 10px;
+      font-size: 20px;
+      font-weight: bold;
+      color: #45a29e;
+      background-color: #c5c6c7;
+      font-family: 'Roboto Slab', serif;
+      margin-bottom: 10px;
     }
+    .linha {
+      display: flex; 
+      justify-content: flex-start;
+      margin: 3px;   
+      background-color: #c5c6c7;
+    }
+    .dado {
+      display: flex;
+      justify-content: flex-end;
+      border-radius: 5px;
+      background-color: #c5c6c7;
+      min-width: 130px;
+      padding: none;
+      color: #45a29e;
+    }
+
+    .campo {
+      border-radius: 5px;
+      background-color: #c5c6c7;
+      color: #05386b;
+    }
+
+    p{
+      padding: 10px;
+      background-color: #c5c6c7;
+      border-radius: 5px;
+      margin: none;
+    }
+
+    p strong {
+      background-color: #c5c6c7;
+      padding: 5px;
+      text-align: left;
+    }
+    .resposta {
+      background-color: #d0d0d0;
+      flex-wrap: wrap-reverse;
+    }
+
   </style>
 </head>
 
 <body>
   <header>
-    <h2>Meu evento</h2>
+    <h1>Meu evento</h1>
   </header>
 
-  <main>    
-
-    <p>nome: <%= nome %>
-    </p>
-
-    <p>email: <%= email %>
-    </p>
-
-    <p>CPF: <%= cpf %>
-    </p>
-
-    <p>telefone: <%= telefone %>
-    </p>
-
-    <p>carater do evento: <%= tipoDeEvento %>
-    </p>
-
-    <p>local: <%= local %>
-    </p>
-
-    <p>Endereço: <%= endereco %>
-    </p>
-
+  <main>
     
+    <div class="slice">
+      <div class="title">Responsável Pelo Evento</div>
 
+      <div class="linha">
+
+        <div class="dado">
+          <p><strong>Nome:</strong></p>
+        </div>
+
+        <div class="campo">
+          <p class="resposta"><%= nome %></p>
+        </div>
+        
+      </div>
+
+      <div class="linha">
+
+        <div class="dado">
+          <p><strong>Email:</strong></p>
+        </div>
+
+        <div class="campo" >
+          <p class="resposta"><%= email %></p>
+        </div>       
+        
+      </div>
+
+      <div class="linha">
+
+        <div class="dado">
+          <p><strong>CPF:</strong></p>
+        </div>
+
+        <div class="campo" >
+          <p class="resposta"><%= cpf %></p>
+        </div>       
+        
+      </div>
+
+      <div class="linha">
+
+        <div class="dado">
+          <p><strong>Telefone:</strong></p>
+        </div>
+
+        <div class="campo" >
+          <p class="resposta"><%= telefone %></p>
+        </div>       
+        
+      </div>
+      
+      <!-- <p><strong>nome:</strong> <%= nome %>
+      </p> -->
+
+      <!-- <p><strong>email:</strong> <%= email %>
+      </p> -->
+  
+      <!-- <p><strong>cpf:</strong> <%= cpf %>
+      </p> -->
+  
+      <!-- <p><strong>telefone:</strong> <%= telefone %>
+      </p> -->
+
+    </div>
+
+    <div class="slice">
+      <div class="title">Dados do Evento</div>
+
+      <div class="linha">
+
+        <div class="dado">
+          <p><strong>Caráter:</strong></p>
+        </div>
+
+        <div class="campo">
+          <p class="resposta"><%= tipoDeEvento %></p>
+        </div>
+        
+      </div>
+
+      <div class="linha">
+
+        <div class="dado">
+          <p><strong>Local:</strong></p>
+        </div>
+
+        <div class="campo">
+          <p class="resposta"><%= local %></p>
+        </div>
+        
+      </div>
+
+      <div class="linha">
+
+        <div class="dado">
+          <p><strong>Endereço:</strong></p>
+        </div>
+
+        <div class="campo">
+          <p class="resposta"><%= endereco %></p>
+        </div>
+        
+      </div>
+
+      <!-- <p><strong>caráter do evento:</strong> <%= tipoDeEvento %>
+      </p> -->
+  
+      <!-- <p><strong>local:</strong> <%= local %>
+      </p> -->
+  
+      <!-- <p><strong>endereço:</strong> <%= endereco %>
+      </p> -->
+
+    </div>
 
   </main>
 

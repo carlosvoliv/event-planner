@@ -1,5 +1,5 @@
 const handlerGetAbout = (req, res, next) => {
-  console.log(':: sobre funcionando, falta organizar esse css né?')
+  console.log('<<<  about page working  >>>')
   res.render('sobre')
 }
 

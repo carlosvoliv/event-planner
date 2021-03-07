@@ -7,7 +7,7 @@ const localModel = require('../models/local-model')
 const caraterEventolModel = require('../models/carater-evento-model')
 
 const handlerGetEvento = (req, res, next) => {
-  console.log(':: página do evento funfando, será que vai gerar o pdf? Só testando')
+  console.log('<<<  event page working  >>>')
 
   // local
   const resultadoModel = localModel.getAllLocal()
@@ -74,7 +74,10 @@ const handlerPostEvento = (req, res, next) => {
   // -- transformando em pdf
 
   let file = { content: htmlRenderized }
-  let options = { format: 'A4' }
+  let options = {
+    format: 'A4',
+    printBackground: true
+  }
 
   htmlToPdf.generatePdf(file, options)
     .then(pdfBuffer => {
@@ -82,7 +85,7 @@ const handlerPostEvento = (req, res, next) => {
       res.send(pdfBuffer)
     })
 
-  console.log('::  se você está lendo essa mensagem, saiba que seu pdf está sendo feito nesse exato momento')
+  console.log('<<  generating pdf  >>')
   // res.send({
   //     mensagem:"teste do POST Evento"
   // })

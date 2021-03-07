@@ -14,7 +14,7 @@ app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "public")));
 
 const handlerRoot = (req, res, next) => {
-  console.log(":: index rodando suave");
+  console.log("<<<  home page working  >>>");
   res.render("index");
 };
 

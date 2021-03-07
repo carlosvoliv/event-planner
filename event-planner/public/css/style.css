@@ -28,10 +28,12 @@ header{
     margin-bottom: 10px;
 }
 
+/* LOGO */
+
 header a {
     text-decoration: none;
 }
-header .logo {   
+.logo {   
     min-height: 50px;
     min-width: 300px;
     display: flex;
@@ -42,24 +44,25 @@ header .logo {
     font-size: 20px;
 }
 
-header .logo .material-icons {
+.logo .material-icons {
      font-size: 50px;
      color: #66fcf1;
      margin-right: 5px;
 }
 
-header .logo p {
+.logo p {
     margin-left: 5px;
     color: #66fcf1;
 }
 
-header .menu {
+/* MENU */
+
+.menu {
     width: 100%;
     height: 100%;
-
 }
 
-header .menu ul {
+.menu ul {
     display: flex;
     list-style: none;
     height: 100%;
@@ -68,7 +71,7 @@ header .menu ul {
     color: lavender;
 }
 
-header .menu ul li {
+.menu ul li {
     margin-right: 40px;
     padding: 10px;
 }
@@ -78,28 +81,27 @@ header .menu ul li {
     border-radius: 5px;
 }
 
-header .menu ul li a{     
+.menu ul li a{     
     color: #66fcf1;
     padding: 10px;
     text-decoration: none;
+    transition: 0.1s;
 }
 
-header .menu ul li a:hover {
+.menu ul li a:hover {
     background-color: #66fcf1;
     border-radius: 5px;
     color: #05386b;
 }
 
-
-
 /* MAIN */
-main {
-    background-color: #c5c6c7;  
+main { 
     display: flex;
     justify-content: center;
     flex: 1 0 auto;
 }
 
+/* CONTAINER GERAL */
 main .container {
     background-color: #d0d0d0;
     min-height: 500px;
@@ -109,19 +111,20 @@ main .container {
     padding: 10px;
 }
 
-main .container .chamada {
+/* HOME */
+.chamada {
     margin-left: 10vh;
     padding: 25px;
     width: 100%;
 }
 
-main .container .chamada p {
+.chamada p {
     font-size: 50px;
     color: #1f2833;
     margin-bottom: 30px;
 }
 
-main .container .chamada a {
+.chamada a {
     background-color:#45a29e;
     padding: 10px;
     font-family: 'Roboto Slab', serif;
@@ -130,26 +133,28 @@ main .container .chamada a {
     border-radius: 5px;
 }
 
-main .container .chamada a:hover {
+.chamada a:hover {
     background-color:#1f2833;
     color: #66fcf1;
 }
 
-main .container .image {
+.image {
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
-main .container .image img {
+.image img {
     width: 70%;
 }
 
-main .container .formulario {
+/* FORMULARIO event */
+
+.formulario {
     width: 500px;    
     margin: auto;
 }
-main .container .formulario .slice {
+.formulario .slice {
     background-color: #c5c6c7;
     padding: 20px;
     border: #45a29e 1px solid;
@@ -158,25 +163,25 @@ main .container .formulario .slice {
     margin-bottom: 20px;
 }
 
-main .container .formulario .slice .title {
+.formulario .slice .title {
     padding: 10px;
     font-size: 20px;
     color: #45a29e;
     text-align: center;
 }
 
-main .container .formulario .formGroup {
+.formulario .formGroup {
     padding: 15px;
 
 }
 
-main .container .formulario .formGroup .formBox {
+.formulario .formGroup .formBox {
     width: 100%;
     position: relative;
     overflow: hidden;
 }
 
-main .container .formulario .formGroup .formBox input {
+.formulario .formGroup .formBox input {
     background-color: #c5c6c7;
     width: 100%;
     height: 100%;
@@ -189,7 +194,7 @@ main .container .formulario .formGroup .formBox input {
     outline: none;
 }
 
-main .container .formulario .formGroup .formBox label {
+.formulario .formGroup .formBox label {
     position: absolute;
     bottom: 0px;
     left: 0%;
@@ -199,7 +204,7 @@ main .container .formulario .formGroup .formBox label {
     border-bottom: 1px solid black;
 }
 
-main .container .formulario .formGroup .formBox label::after {
+.formulario .formGroup .formBox label::after {
     content: "";
     position: absolute;
     left: 0px;
@@ -211,32 +216,32 @@ main .container .formulario .formGroup .formBox label::after {
     transition: transform  0.3s ease;
 }
 
-main .container .formulario .formGroup .formBox label .content-box {
+.formulario .formGroup .formBox label .content-box {
     position: absolute;
     bottom: 5px;
     left: 0px;
     transition: all 0.3s ease;
 }
 
-main .container .formulario .formGroup .formBox input:focus + .label-box .content-box,
-main .container .formulario .formGroup .formBox input:valid + .label-box .content-box {
+.formulario .formGroup .formBox input:focus + .label-box .content-box,
+.formulario .formGroup .formBox input:valid + .label-box .content-box {
     background-color: #c5c6c7;
     transform: translateY(-130%);
     font-size: 13px;
     color: #45a29e;
 }
 
-main .container .formulario .formGroup .formBox input:focus + .label-box::after, 
-main .container .formulario .formGroup .formBox input:valid + .label-box::after {
+.formulario .formGroup .formBox input:focus + .label-box::after, 
+.formulario .formGroup .formBox input:valid + .label-box::after {
     transform: translateX(0%);
 }
 
-main .container .formulario .btn {
+.formulario .btn {
     display: flex;
     justify-content: center;
 }
 
-main .container .formulario button {
+.formulario button {
     background-color:#45a29e;
     padding: 10px;
     font-family: 'Roboto Slab', serif;
@@ -246,22 +251,44 @@ main .container .formulario button {
     text-decoration: none;
     border: none;
     border-radius: 5px;
-    
+    cursor: pointer;    
 }
 
-main .container .formulario button:hover {
+.formulario button:hover {
     background-color:#1f2833;
     color: #66fcf1;
 }
 
-main .container .about {
+.formulario .formGroup select {
+    padding: 4px;
+    font-family: 'Roboto Slab', serif;
+    font-size: 16px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+}
+.formulario .formGroup .radioBtn {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+/* ABOUT sobre */
+
+.about {
     width: 100%;
     align-self: flex-start;
     display: flex;
     justify-content: center;
 }
 
-main .container .about .text {
+.about .text {
     padding: 20px;
 }
 
@@ -270,9 +297,7 @@ footer {
     margin-top: 20px;
     padding: 10px;
     background-color: #1f2833;
-    flex-shrink: 0;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;    
     min-height: 50px;
@@ -282,4 +307,8 @@ footer {
 footer p {
     color: #45a29e;
     font-size: small;
+}
+
+footer p span {
+    font-weight: bold;
 }

@@ -1,10 +1,10 @@
 <div class="slice">
 
-  <div class="title">Informações gerais</div>
+  <div class="title">Informações Gerais</div>
 
   <div class="formGroup">              
     <label for="carater">Caráter do Evento:</label>
-    <select name="carater" id="">
+    <select name="carater" id="" required>
       <option value="">Selecione ...</option>
       <% caraterEvento.map(item=> { %>
         <option value="<%= item.value %>">

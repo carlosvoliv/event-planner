@@ -1,0 +1,32 @@
+<div class="slice">
+
+  <div class="title">Horários</div>
+
+  <div class="formGroup">
+    <label for="local2">Entrada Antecipada:</label>
+    <input type="radio" name="local2" value="1"> Sim
+    <input type="radio" name="local2" value="2"> Não
+  </div>   
+
+  <div class="formGroup">              
+    <label for="carater2">Caráter do Evento:</label>
+    <select name="carater2" id="">
+      <option value="">Selecione ...</option>
+      <% caraterEvento.map(item=> { %>
+        <option value="<%= item.value %>">
+          <%= item.label %>
+        </option>
+        <% }) %>
+    </select>
+  </div>  
+  
+  <div class="formGroup">
+    <div class="formBox">
+      <input type="text" name="endereco2" autocomplete="off">
+      <label for="endereco" class="label-box">
+        <span class="content-box">Endereço</span>
+      </label>
+    </div>
+  </div>
+
+</div>
