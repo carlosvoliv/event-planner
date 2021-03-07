@@ -8,6 +8,8 @@ const caraterEventolModel = require('../models/carater-evento-model')
 
 const horaInicioModel = require('../models/hora-inicio-model')
 
+const horaFimModel = require('../models/hora-fim-model')
+
 const handlerGetEvento = (req, res, next) => {
   console.log('<<<  event page working  >>>')
 
@@ -42,11 +44,21 @@ const handlerGetEvento = (req, res, next) => {
     }
   })
 
+  // hora do término
+  const resultadoHoraFim = horaFimModel.getAllHoraFim()
+
+  const horaFimItensViewModel = resultadoHoraFim.map((item) => {
+    return {
+      value: item.id,
+      label: `${item.descricao}`
+    }
+  })
 
   const getViewModel = {
     local: localItensViewModel,
     caraterEvento: caraterEventoItensViewModel,
-    horaInicio: horaInicioItensViewModel
+    horaInicio: horaInicioItensViewModel,
+    horaFim: horaFimItensViewModel
   }
   res.render('evento', getViewModel)
 }
@@ -66,6 +78,8 @@ const handlerPostEvento = (req, res, next) => {
 
   const horaInicioResultado = horaInicioModel.getHoraInicioPorId(body.inicio)
 
+  const horaFimResultado = horaFimModel.getHoraFimPorId(body.fim)
+
   const viewModel = {
     nome: body.name,
     email: body.email,
@@ -76,7 +90,8 @@ const handlerPostEvento = (req, res, next) => {
     tipoDeEvento: caraterEventoResultado.descricao,
     endereco: body.endereco,
     dataEvento: body.dataEvento,
-    horaInicio: horaInicioResultado.descricao
+    horaInicio: horaInicioResultado.descricao,
+    horaFim: horaFimResultado.descricao
   }
 
   // -- criando o template

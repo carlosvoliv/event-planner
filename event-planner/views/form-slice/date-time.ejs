@@ -23,16 +23,14 @@
       </select>
     </div>
     <div class="formGroup">
-      <label for="horaFim">Término do Evento:</label>
-      <select name="horaFim" id="">
+      <label for="fim">Término do Evento:</label>
+      <select name="fim" id="">
         <option value="">Selecione ...</option>
-        <option value="">00:00</option>
-        <option value="">01:00</option>
-        <option value="">02:00</option>
-        <option value="">03:00</option>
-        <option value="">04:00</option>
-        <option value="">05:00</option>
-        <option value="">06:00</option>
+        <% horaFim.map(item=> { %>
+          <option value="<%= item.value %>">
+            <%= item.label %>
+          </option>
+          <% }) %>
       </select>
     </div>
   </div>

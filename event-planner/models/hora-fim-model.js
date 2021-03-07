@@ -116,6 +116,6 @@ const getAll = () => {
 }
 
 module.exports = {
-  getAllHoraInicio: getAll,
-  getHoraInicioPorId: getById
+  getAllHoraFim: getAll,
+  getHoraFimPorId: getById
 }
