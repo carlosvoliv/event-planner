@@ -6,6 +6,8 @@ const localModel = require('../models/local-model')
 
 const caraterEventolModel = require('../models/carater-evento-model')
 
+const horaInicioModel = require('../models/hora-inicio-model')
+
 const handlerGetEvento = (req, res, next) => {
   console.log('<<<  event page working  >>>')
 
@@ -30,9 +32,21 @@ const handlerGetEvento = (req, res, next) => {
     }
   })
 
+  // hora de início
+  const resultadoHoraInicio = horaInicioModel.getAllHoraInicio()
+
+  const horaInicioItensViewModel = resultadoHoraInicio.map((item) => {
+    return {
+      value: item.id,
+      label: `${item.descricao}`
+    }
+  })
+
+
   const getViewModel = {
     local: localItensViewModel,
-    caraterEvento: caraterEventoItensViewModel
+    caraterEvento: caraterEventoItensViewModel,
+    horaInicio: horaInicioItensViewModel
   }
   res.render('evento', getViewModel)
 }
@@ -50,14 +64,19 @@ const handlerPostEvento = (req, res, next) => {
 
   const caraterEventoResultado = caraterEventolModel.getCaraterEventoPorId(body.carater)
 
+  const horaInicioResultado = horaInicioModel.getHoraInicioPorId(body.inicio)
+
   const viewModel = {
     nome: body.name,
     email: body.email,
     cpf: body.cpf,
     telefone: body.telefone,
     local: localResultado.descricao,
+    nomeDoEvento: body.titulo,
     tipoDeEvento: caraterEventoResultado.descricao,
-    endereco: body.endereco
+    endereco: body.endereco,
+    dataEvento: body.dataEvento,
+    horaInicio: horaInicioResultado.descricao
   }
 
   // -- criando o template

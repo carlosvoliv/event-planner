@@ -3,30 +3,42 @@
   <div class="title">Horários</div>
 
   <div class="formGroup">
-    <label for="local2">Entrada Antecipada:</label>
-    <input type="radio" name="local2" value="1"> Sim
-    <input type="radio" name="local2" value="2"> Não
-  </div>   
+    <label for="dataEvento">Data do Evento:</label>
+    <input type="date" name="dataEvento" required>
 
-  <div class="formGroup">              
-    <label for="carater2">Caráter do Evento:</label>
-    <select name="carater2" id="">
-      <option value="">Selecione ...</option>
-      <% caraterEvento.map(item=> { %>
-        <option value="<%= item.value %>">
-          <%= item.label %>
-        </option>
-        <% }) %>
-    </select>
-  </div>  
-  
-  <div class="formGroup">
-    <div class="formBox">
-      <input type="text" name="endereco2" autocomplete="off">
-      <label for="endereco" class="label-box">
-        <span class="content-box">Endereço</span>
-      </label>
+  </div>
+
+
+
+  <div class="period">
+    <div class="formGroup">
+      <label for="inicio">Início do Evento:</label>
+      <select name="inicio" id="">
+        <option value="">Selecione ...</option>
+        <% horaInicio.map(item=> { %>
+          <option value="<%= item.value %>">
+            <%= item.label %>
+          </option>
+          <% }) %>
+      </select>
+    </div>
+    <div class="formGroup">
+      <label for="horaFim">Término do Evento:</label>
+      <select name="horaFim" id="">
+        <option value="">Selecione ...</option>
+        <option value="">00:00</option>
+        <option value="">01:00</option>
+        <option value="">02:00</option>
+        <option value="">03:00</option>
+        <option value="">04:00</option>
+        <option value="">05:00</option>
+        <option value="">06:00</option>
+      </select>
     </div>
   </div>
+
+  
+
+
 
 </div>

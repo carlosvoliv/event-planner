@@ -14,7 +14,8 @@
       background-color: #d0d0d0;
       font-family: 'Roboto Slab', serif;
       margin-left: 8px;
-      margin-right: 8px;      
+      margin-right: 8px;
+       
     }
 
     h1 {
@@ -22,6 +23,7 @@
       font-size: 25px;
       font-weight: lighter;
       color: #45a29e;
+      margin: 30px;
     }
 
     .slice {
@@ -29,7 +31,7 @@
       background-color: #c5c6c7;
       border: 2px solid #45a29e;
       border-radius: 5px;
-      margin-bottom: 20px;
+      margin-top: 20px;
     }
 
     .title {
@@ -85,10 +87,84 @@
 
 <body>
   <header>
-    <h1>Meu evento</h1>
+    <h1><%= nomeDoEvento %></h1>
   </header>
 
   <main>
+
+    <div class="slice">
+      <div class="title">Dados do Evento</div>
+
+      <div class="linha">
+
+        <div class="dado">
+          <p><strong>Caráter:</strong></p>
+        </div>
+
+        <div class="campo">
+          <p class="resposta"><%= tipoDeEvento %></p>
+        </div>
+        
+      </div>
+
+      <div class="linha">
+
+        <div class="dado">
+          <p><strong>Local:</strong></p>
+        </div>
+
+        <div class="campo">
+          <p class="resposta"><%= local %></p>
+        </div>
+        
+      </div>
+
+      <div class="linha">
+
+        <div class="dado">
+          <p><strong>Endereço:</strong></p>
+        </div>
+
+        <div class="campo">
+          <p class="resposta"><%= endereco %></p>
+        </div>
+        
+      </div>
+
+      <div class="linha">
+
+        <div class="dado">
+          <p><strong>Dia:</strong></p>
+        </div>
+
+        <div class="campo" >
+          <p class="resposta"><%= dataEvento %></p>
+        </div>       
+        
+      </div>
+
+      <div class="linha">
+
+        <div class="dado">
+          <p><strong>Início:</strong></p>
+        </div>
+
+        <div class="campo" >
+          <p class="resposta"><%= horaInicio %></p>
+        </div>       
+        
+      </div>
+
+      <!-- <p><strong>caráter do evento:</strong> <%= tipoDeEvento %>
+      </p> -->
+  
+      <!-- <p><strong>local:</strong> <%= local %>
+      </p> -->
+  
+      <!-- <p><strong>endereço:</strong> <%= endereco %>
+      </p> -->
+
+    </div>
     
     <div class="slice">
       <div class="title">Responsável Pelo Evento</div>
@@ -140,6 +216,8 @@
         </div>       
         
       </div>
+
+      
       
       <!-- <p><strong>nome:</strong> <%= nome %>
       </p> -->
@@ -153,57 +231,7 @@
       <!-- <p><strong>telefone:</strong> <%= telefone %>
       </p> -->
 
-    </div>
-
-    <div class="slice">
-      <div class="title">Dados do Evento</div>
-
-      <div class="linha">
-
-        <div class="dado">
-          <p><strong>Caráter:</strong></p>
-        </div>
-
-        <div class="campo">
-          <p class="resposta"><%= tipoDeEvento %></p>
-        </div>
-        
-      </div>
-
-      <div class="linha">
-
-        <div class="dado">
-          <p><strong>Local:</strong></p>
-        </div>
-
-        <div class="campo">
-          <p class="resposta"><%= local %></p>
-        </div>
-        
-      </div>
-
-      <div class="linha">
-
-        <div class="dado">
-          <p><strong>Endereço:</strong></p>
-        </div>
-
-        <div class="campo">
-          <p class="resposta"><%= endereco %></p>
-        </div>
-        
-      </div>
-
-      <!-- <p><strong>caráter do evento:</strong> <%= tipoDeEvento %>
-      </p> -->
-  
-      <!-- <p><strong>local:</strong> <%= local %>
-      </p> -->
-  
-      <!-- <p><strong>endereço:</strong> <%= endereco %>
-      </p> -->
-
-    </div>
+    </div>    
 
   </main>
 
