@@ -26,7 +26,7 @@ app.get("/sobre", sobreController.get);
 const { version, name } = require('./package.json')
 
 console.log(
-  `<<<  ${name} v${version} was started in 'DEV' environment  >>>`
+  `<<<  ${name} v${version} was started in 'DEVELOPER' environment  >>>`
 )
 
 app.listen(port, () => {
