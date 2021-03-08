@@ -296,23 +296,33 @@ main .container {
     display: flex;
     flex-direction: column;
     justify-self: center;
-    background-color: royalblue;
 }
 
 .about-project {
-    background-color: green;
     text-align: center;
     max-width: 600px;
+}
+
+.about-project h2 {
+    color: #45a29e;
+    font-weight: normal;
+    font-size:xx-large;
+    padding: 20px;
+}
+.about-project p {
+    padding: 10px;
 }
 
 .about-me {
     background-color: #c5c6c7;
     padding: 20px;
+    max-width: 300px;
     border: #45a29e 2px solid;
     border-radius: 5px;
     margin-top: 30px;
     margin-bottom: 20px;
     display: flex;
+    align-self: center;
 }
 
 .about-me-text h3{
@@ -323,6 +333,7 @@ main .container {
 .social i{
     color: #05386b;
     text-decoration: none;
+    padding: 10px;
 }
 
 .about-me img {
